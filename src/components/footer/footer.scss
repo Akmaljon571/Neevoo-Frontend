@@ -1,0 +1,127 @@
+@import "../../utils/scss/var.scss";
+
+.footer {
+    &_top {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 44px;
+    }
+
+    &_logo {
+        width: 336px;
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        flex-direction: column;
+        font-family: Inter;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #878787;
+
+        img {
+            cursor: pointer;
+        }
+    }
+
+    &_list, &_list2, &_list3, &_list4 {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    &_item {
+        font-family: Inter;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #878787;
+        cursor: pointer;
+    }
+
+    &_itemH {
+        color: #155CA1;
+        font-family: Inter;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 19px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+    &_bottom {
+        padding: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &_barcha {
+        font-family: Inter;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #155CA1;
+    }
+
+    &_tarmoq {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+    }
+}
+
+@media screen and (max-width: 1054px) {
+    .footer {
+        &_list2{
+            display: none;
+        }
+
+        &_list4{
+            width: 150px;
+        }
+
+        &_logo {
+            width: 300px;
+        }
+    }
+}
+
+@media screen and (max-width: 836px) {
+    .footer {
+        &_list3{
+            display: none;
+        }
+
+        &_logo {
+            width: 200px;
+        }
+    }
+}
+
+@media screen and (max-width: 601px) {
+    .footer {
+        &_list{
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 485px) {
+    .footer {
+        &_list4{
+            display: none;
+        }
+    }
+}

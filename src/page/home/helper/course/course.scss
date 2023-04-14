@@ -1,0 +1,71 @@
+.home_course {
+
+    &-h2 {
+        margin-bottom: 5px;
+        font-family: Montserrat;
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 52px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #13334C;
+    }
+
+    &-p {
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 26px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #878787;
+        margin-bottom: 20px;
+    }
+
+    &-list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    &-item {
+        display: flex;
+        align-items: center;
+        padding: 5px 10px;
+        background: #E6F0F9;
+        border-radius: 20px;
+        gap: 5px;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 23px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #155CA1;
+        cursor: pointer;
+
+        img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50px;
+        }
+    }
+
+    &-btn {
+        margin-top: 30px;
+        background: linear-gradient(268.65deg, #13334C -7.43%, #5782AC 100%);
+        padding: 9px 20px;
+        box-shadow: 0px 10px 8px rgba(0, 0, 0, 0.1);
+border-radius: 5px;
+border: none;
+font-family: Montserrat;
+font-size: 18px;
+font-weight: 600;
+line-height: 26px;
+letter-spacing: 0em;
+text-align: left;
+color: #fff;
+cursor: pointer;
+    }
+}
