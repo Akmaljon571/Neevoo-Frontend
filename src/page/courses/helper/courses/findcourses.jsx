@@ -66,11 +66,11 @@ function FindCourses () {
                         </p>
                         <p>
                           <GlobalOutlined />
-                          {e?.lang == 'uz'
+                          {e?.lang === 'uz'
                             ? ' O’zbek'
-                            : e?.lang == 'ru'
+                            : e?.lang === 'ru'
                             ? ' Rus'
-                            : e?.lang == 'en'
+                            : e?.lang === 'en'
                             ? ' English'
                             : ' O’zbek'}
                         </p>
@@ -89,7 +89,7 @@ function FindCourses () {
                 </div>
               )
             })
-          : <img style={{margin: '0 auto'}} src={error} alt='zor rasm'/>}
+          : <img style={{margin: '50px auto'}} src={error} alt='zor rasm'/>}
       </main>
     </>
   )

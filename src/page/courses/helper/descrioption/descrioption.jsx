@@ -1,7 +1,6 @@
 import { useLocation } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { GET } from '../../../../utils/api/get'
-import error from '../../../../img/404.png'
 import './descrioption.scss'
 
 function Descrioption () {
@@ -40,11 +39,7 @@ function Descrioption () {
           )
         })
       ) : (
-        <img
-          style={{ margin: '20px auto', display: 'block' }}
-          src={error}
-          alt='error'
-        />
+        null
       )}
     </>
   )
