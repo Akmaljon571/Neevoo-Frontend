@@ -15,15 +15,15 @@ function HomeTeacher () {
         <img
           className='home_dumaloq-img1'
           src={dumaloq}
-          alt='home page image'
+          alt='home page_image'
         />
         <img
           className='home_dumaloq-img2'
           src={burchak}
-          alt='home page image'
+          alt='home page_image'
         />
         <div className='home_dumaloq-card1'>
-          <img src={card2} alt='home page image' />
+          <img src={card2} alt='home page_image' />
           <p>
             “Lorem ipsum dolor sit amet consectetur. Urna faucibus velit nam
             mattis sapien gravida eget faucibus praesent ”
@@ -31,7 +31,7 @@ function HomeTeacher () {
           <span>Jessika Blu</span>
         </div>
         <div className='home_dumaloq-card2'>
-          <img src={ustoz} alt='home page image' />
+          <img src={ustoz} alt='home page_image' />
           <p>
             “Lorem ipsum dolor sit amet consectetur. Urna faucibus velit nam
             mattis sapien gravida eget faucibus praesent ”
@@ -41,21 +41,21 @@ function HomeTeacher () {
         <div className='home_dumaloq-card3'>
             <span className='home_dumaloq-span'>100+ Ustozlar</span>
           <div>
-            <img src={card3} alt='home page image' />
+            <img src={card3} alt='home page _image' />
             <div className='home-header-div'>
               <h2>Anna Karina</h2>
               <span>AI dasturida ishlovchi</span>
             </div>
           </div>
           <div>
-            <img src={card3} alt='home page image' />
+            <img src={card3} alt='home page _image' />
             <div className='home-header-div'>
               <h2>Anna Karina</h2>
               <span>AI dasturida ishlovchi</span>
             </div>
           </div>
           <div>
-            <img src={card3} alt='home page image' />
+            <img src={card3} alt='home page _image' />
             <div className='home-header-div'>
               <h2>Anna Karina</h2>
               <span>AI dasturida ishlovchi</span>

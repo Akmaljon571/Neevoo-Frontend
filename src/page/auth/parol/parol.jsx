@@ -5,9 +5,7 @@ import lock from '../../../img/lock.svg'
 import { useRef, useState } from 'react'
 import { POST } from '../../../utils/api/post'
 import { message } from 'antd'
-import useStart from '../../../hooks/useStart'
 import { useNavigate } from 'react-router-dom'
-import { host } from '../../../content/start'
 
 function Parol () {
   const email = useRef()
@@ -15,7 +13,6 @@ function Parol () {
   const password2 = useRef()
   const inputCode = useRef()
   const [messageApi, contextHolder] = message.useMessage()
-  const { setToken } = useStart()
   const [active, setActive] = useState({})
   const [vaqt, setVaqt] = useState(0)
   const [qayta, setQayta] = useState(true)
@@ -51,7 +48,7 @@ function Parol () {
   }
 
   const registr = () => {
-    const emaill = email.current.value.split('@')[1] == 'gmail.com'
+    const emaill = email.current.value.split('@')[1] === 'gmail.com'
     if (!emaill) {
       return messageApi.open({
         key,
@@ -111,7 +108,7 @@ function Parol () {
     POST('/users/parol/email/' + inputCode.current?.value?.trim(), obj)
       .then(re => re.json())
       .then(data => {
-        if (data.status == 200) {
+        if (data.status === 200) {
           navigate('/login')
           messageApi.open({
             key,
@@ -193,7 +190,7 @@ function Parol () {
               </p>
             ) : (
               <label style={{ marginBottom: '20px' }}>
-                Kodni 0:{String(vaqt).length == 2 ? vaqt : `0${vaqt}`} soniyadan
+                Kodni 0:{String(vaqt).length === 2 ? vaqt : `0${vaqt}`} soniyadan
                 so‘ng qayta yuborish mumkin
               </label>
             )}

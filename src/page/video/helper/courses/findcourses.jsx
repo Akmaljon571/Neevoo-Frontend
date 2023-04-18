@@ -1,4 +1,4 @@
-import { useLocation, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import {
   CalendarOutlined,
   FieldNumberOutlined,
@@ -62,11 +62,11 @@ function FindCourses ({ children }) {
                         </p>
                         <p style={{color: '#fff', fontSize: '15px'}}>
                           <GlobalOutlined />
-                          {e?.lang == 'uz'
+                          {e?.lang === 'uz'
                             ? ' O’zbek'
-                            : e?.lang == 'ru'
+                            : e?.lang === 'ru'
                             ? ' Rus'
-                            : e?.lang == 'en'
+                            : e?.lang === 'en'
                             ? ' English'
                             : ' O’zbek'}
                         </p>

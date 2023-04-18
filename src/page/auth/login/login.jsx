@@ -17,15 +17,15 @@ function Login () {
   const key = 'updatable';
 
   const login = () => {
-    // const emaill = email.current.value.split('@')[1] == 'gmail.com'
-    // if (!emaill) {
-    //   return messageApi.open({
-    //     key,
-    //     type: 'error',
-    //     content: 'Malumotlaringizni togri kiriting!',
-    //     duration: 2
-    //   })
-    // }
+    const emaill = email.current.value.split('@')[1] === 'gmail.com'
+    if (!emaill) {
+      return messageApi.open({
+        key,
+        type: 'error',
+        content: 'Malumotlaringizni togri kiriting!',
+        duration: 2
+      })
+    }
 
     const obj = {
       email: email.current.value,

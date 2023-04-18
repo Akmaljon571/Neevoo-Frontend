@@ -26,7 +26,7 @@ function VideoHelper ({ children }) {
           }
         })
     }
-  }, [children, setVideos])
+  }, [children, setVideos, setOne, setActive, token])
 
   const handleClick = (data) => {
     setOne(img_url + data)

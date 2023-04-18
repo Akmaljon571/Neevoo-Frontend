@@ -45,11 +45,11 @@ function Hero () {
               <p>
                 Til
                 <span>
-                  {course.lang == 'uz'
+                  {course.lang === 'uz'
                     ? 'O’zbek'
-                    : course.lang == 'ru'
+                    : course.lang === 'ru'
                     ? 'Rus'
-                    : course.lang == 'en'
+                    : course.lang === 'en'
                     ? 'English'
                     : 'O’zbek'}
                 </span>

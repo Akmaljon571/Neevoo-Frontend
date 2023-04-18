@@ -6,7 +6,6 @@ import logo from '../../img/2-logo 1.svg'
 import bolim from '../../img/Frame.svg'
 import { GET } from '../../utils/api/get'
 import { img_url } from '../../content/start'
-import person from '../../img/user.svg'
 import login from '../../img/log-in.svg'
 import uz from '../../img/image 38.svg'
 import ru from '../../img/image 36.svg'
@@ -34,13 +33,13 @@ function Header () {
   const menu = useRef()
 
   const onSelect = e => {
-    if (e.target.className == 'header_option--list') {
+    if (e.target.className === 'header_option--list') {
       const value =
-        e.target.textContent == 'Uzbek'
+        e.target.textContent === 'Uzbek'
           ? 'uz'
-          : e.target.textContent == 'Rus'
+          : e.target.textContent === 'Rus'
           ? 'ru'
-          : e.target.textContent == 'English'
+          : e.target.textContent === 'English'
           ? 'en'
           : uz
       setSelect(value)
@@ -105,15 +104,17 @@ function Header () {
   }
 
   const clickMenu = ({ key, domEvent }) => {
-    if (key != 1) {
-      if (domEvent.target.className == 'ant-menu-item-icon') {
+    const typeKey = typeof key == 'number' ? 1 : '1'
+
+    if (key !== typeKey) {
+      if (domEvent.target.className === 'ant-menu-item-icon') {
         navigate('/bolim/' + domEvent.target.parentNode.lastChild.textContent)
       } else if (
-        domEvent.target.className ==
+        domEvent.target.className ===
         'ant-menu-item ant-menu-item-active ant-menu-item-selected'
       ) {
         navigate('/bolim/' + domEvent.target.lastChild.textContent)
-      } else if (domEvent.target.className == 'ant-menu-title-content') {
+      } else if (domEvent.target.className === 'ant-menu-title-content') {
         navigate('/bolim/' + domEvent.target.textContent)
       } else {
         navigate('/bolim')
@@ -166,11 +167,11 @@ function Header () {
                 <img
                   className='header_select--img'
                   src={
-                    select == 'uz'
+                    select === 'uz'
                       ? uz
-                      : select == 'ru'
+                      : select === 'ru'
                       ? ru
-                      : select == 'en'
+                      : select === 'en'
                       ? en
                       : uz
                   }

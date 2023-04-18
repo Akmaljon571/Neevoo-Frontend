@@ -79,6 +79,7 @@ function Search () {
                 <img
                   className='header_search--list--suc'
                   src={img_url + e.image}
+                  alt='header_search'
                 />
               }{' '}
               <span>{e.title}</span>

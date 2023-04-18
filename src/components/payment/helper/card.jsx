@@ -13,7 +13,7 @@ function Card() {
         GET('/users/one', token)
         .then(re => re.json())
         .then(data => setUser(data))
-    }, []);
+    }, [token]);
 
     const telegram = (el) => {
         const data = `

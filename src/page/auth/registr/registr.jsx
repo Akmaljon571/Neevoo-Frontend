@@ -51,15 +51,15 @@ function Registr () {
   }
 
   const registr = () => {
-    // const emaill = email.current.value.split('@')[1] == 'gmail.com'
-    // if (!emaill) {
-    //   return messageApi.open({
-    //     key,
-    //     type: 'error',
-    //     content: 'Malumotlaringizni togri kiriting!',
-    //     duration: 2
-    //   })
-    // }
+    const emaill = email.current.value.split('@')[1] === 'gmail.com'
+    if (!emaill) {
+      return messageApi.open({
+        key,
+        type: 'error',
+        content: 'Malumotlaringizni togri kiriting!',
+        duration: 2
+      })
+    }
 
     if (password.current.value === password2.current.value) {
       const obj = {
@@ -118,7 +118,7 @@ function Registr () {
     )
     .then(re => re.json())
     .then(data => {
-      if (data.status == 201) {
+      if (data.status === 201) {
         setToken(data.token)
         localStorage.setItem('user_token', JSON.stringify(data.token))
         navigate('/bolim')
@@ -208,7 +208,7 @@ function Registr () {
               </p>
             ) : (
               <label style={{ marginBottom: '20px' }}>
-                Kodni 0:{String(vaqt).length == 2 ? vaqt : `0${vaqt}`} soniyadan
+                Kodni 0:{String(vaqt).length === 2 ? vaqt : `0${vaqt}`} soniyadan
                 so‘ng qayta yuborish mumkin
               </label>
             )}
