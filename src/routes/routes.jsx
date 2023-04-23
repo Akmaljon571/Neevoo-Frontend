@@ -3,6 +3,7 @@ import { Courses, Error, Home, Login, Registr, Video } from "../page";
 import { Bolim } from "../components/bolim/bolim";
 import Payment from "../components/payment/payment";
 import Parol from '../page/auth/parol/parol';
+import { About } from '../components/about/about';
 
 function Routerr() {
   return (
@@ -12,7 +13,7 @@ function Routerr() {
       <Route path='/bolim/:id' element={<Courses />} />
       <Route path='/course/:id' element={<Video />} />
       <Route path='/payment' element={<Payment />} />
-      {/* <Route path='/about' element={} /> */}
+      <Route path='/about' element={<About/>} />
       {/* <Route path='/aloqa' element={} /> */}
       <Route path='/registr' element={<Registr />} />
       <Route path='/login' element={<Login />} />
