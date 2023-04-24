@@ -60,6 +60,9 @@
     &_profile {
         position: relative;
         color: #155CA1;
+        padding: 30px 10px;
+        cursor: pointer;
+        z-index: 1;
 
         &:hover &-option {
             display: flex !important;
@@ -67,7 +70,7 @@
 
         &-option {
             position: absolute;
-            top: 50px;
+            top: 90px;
             left: -30px;
             border-top: 3px solid #fff !important;
             background-color: #fff;
@@ -439,8 +442,9 @@
             line-height: 24px;
             letter-spacing: 0em;
             color: $blue;
-            background-color: $bgc !important;
             border-radius: 10px;
+            border: 2px solid #155CA1 !important;
+
 
             & :hover {
                 color: $blue !important;
