@@ -110,7 +110,7 @@ function Hero () {
         </div>
       </div>
       <VideoHelper>{course.id}</VideoHelper>
-      <FindCourses>{course.category}</FindCourses>
+      <FindCourses>{course}</FindCourses>
     </div>
   )
 }
