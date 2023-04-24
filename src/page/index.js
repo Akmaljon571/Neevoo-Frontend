@@ -3,6 +3,7 @@ import { Login, Registr } from './auth'
 import Error from './Error/error'
 import Video from './video/video'
 import Courses from './courses/courses'
+import History from './history/history'
 
 export {
     Home,
@@ -10,5 +11,6 @@ export {
     Registr,
     Error,
     Courses,
-    Video
+    Video,
+    History
 }
