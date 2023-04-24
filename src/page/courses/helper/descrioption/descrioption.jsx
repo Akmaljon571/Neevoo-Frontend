@@ -11,7 +11,7 @@ function Descrioption () {
     const titleCategory = location.pathname.split('/')[2]
     GET('/categories/' + titleCategory)
       .then(res => res.json())
-      .then(data => setCategory(data))
+      .then(data => setCategory(data.filter(e => e.title === titleCategory)))
   }, [location.pathname])
 
   return (
