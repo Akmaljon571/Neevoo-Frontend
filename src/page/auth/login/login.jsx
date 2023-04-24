@@ -73,7 +73,7 @@ function Login () {
   return (
     <div className='login'>
       <div className='login_left'>
-        <h2 className='login_h2'>Eng katta jamiyatimizga xush kelibsiz</h2>
+        <h2 className='login_h2'>Eng katta jamiyatimizga xush kelibsiz </h2>
         <p className='login_p'>Keling, bugun yangi narsalarni o'rganamiz!</p>
         <img src={image} alt='boy' />
       </div>
