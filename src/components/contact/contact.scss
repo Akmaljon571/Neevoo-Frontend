@@ -157,6 +157,8 @@
         border-radius: 5px;
         border: none;
         flex: none;
+        outline: none;
+        padding-left: 10px;
     }
 
     label {
@@ -177,6 +179,8 @@
         resize: none;
         background: rgba(245, 247, 249, 0.5);
         border-radius: 5px;
+        outline: none;
+        padding-left: 10px;
     }
 
     &--subbtn {
