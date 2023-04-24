@@ -39,8 +39,8 @@
         line-height: 24px;
         letter-spacing: 0em;
         color: $blue;
-        background-color: $bgc !important;
         border-radius: 10px;
+        border: 2px solid #155CA1 !important;
 
         & :hover {
             color: $blue !important;
@@ -321,6 +321,7 @@
         align-items: center;
         flex-direction: column;
         position: relative;
+        padding: 30px 20px;
 
         &--top {
             display: flex;
@@ -348,7 +349,7 @@
 
     &_option {
         position: absolute;
-        top: 22px;
+        top: 60px;
         cursor: pointer;
         display: none;
         align-items: flex-start;

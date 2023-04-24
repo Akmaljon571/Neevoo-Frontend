@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import useStart from '../../../hooks/useStart'
 import { GET } from '../../../utils/api/get'
 import { img_url } from '../../../content/start'
-import Error from '../../../img/404.png'
+import Error from '../../../img/search-not-found-5342748-4468820.webp'
 import loading from '../../../img/ZZ5H.gif'
 import { useNavigate } from 'react-router-dom'
 
@@ -57,7 +57,7 @@ function Search () {
           onChange={onSearch}
           ref={input}
           type='text'
-          placeholder='Search qidirmoqchi bolgan course'
+          placeholder='Write and Search'
         />
         <svg
           xmlns='http://www.w3.org/2000/svg'
@@ -90,7 +90,7 @@ function Search () {
             style={
               load && input?.current?.value
                 ? { width: '100px', marginTop: '80px' }
-                : {}
+                : {width: '350px', marginTop: '10px'}
             }
             className='error_image'
             src={load && input?.current?.value ? loading : Error}
