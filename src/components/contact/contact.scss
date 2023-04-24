@@ -1,0 +1,215 @@
+//doesn't exist but uses to write easier css
+.contact { 
+    &__hero {
+        margin-top: 122px;
+        margin-bottom: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__heading {
+        text-align: center;
+        margin-bottom: 30px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        color: #155CA2;
+    }
+
+    &__heading2 {
+        text-align: center;
+        margin-bottom: 50px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 39px;
+        color: #1E0A25;
+    }
+
+    &__box {
+        display: flex;
+        gap: 50px;
+        flex-wrap: wrap;
+    }
+
+    &__unique__wrapper {
+        margin: 0 auto;
+        height: 238px;
+        max-width: 393px;
+        min-height: 238px;
+        background: linear-gradient(268.65deg, #13334C -7.43%, #5782AC 100%);
+        border-radius: 10px;
+    }
+
+    &__u__item {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        gap: 7px;
+        color: #FFFFFF;
+
+        &__heading {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 22px;
+            
+            color: #FFF;
+        }
+
+        &__location,
+        &__phone, 
+        &__mail {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            display: flex;
+            color: #FFF;
+        }
+
+        &__mail {
+            text-decoration: underline;
+        }
+    }
+
+    &__wrapper {
+        margin: 0 auto;
+        background: #FFFFFF;
+        box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+        min-height: 238px;
+        max-width: 393px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        padding-top: 30px;
+        padding-left: 47px;
+        padding-right: 47px;
+        padding-bottom: 31px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        gap: 7px;
+
+        &__heading {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 22px;
+            
+            color: #1E0A25;
+        }
+
+        &__location,
+        &__phone, 
+        &__mail {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            display: flex;
+            color: #878787;
+        }
+
+        &__mail {
+            text-decoration: underline;
+        }
+    }
+}
+
+.contact--main {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    gap: 20px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+
+    &--img {
+        max-width: 478px;
+        max-height: 511px;
+        min-width: 300px;
+        margin: 0 auto;
+    }
+
+    &--box {
+        margin: 0 auto;
+    }
+
+    &--heading {
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 39px;
+        text-align: center;
+        color: #1E0A25;
+    }
+
+    input {
+        width: 650px;
+        min-height: 55px;
+        background: rgba(245, 247, 249, 0.5);
+        border-radius: 5px;
+        border: none;
+        flex: none;
+    }
+
+    label {
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        margin-top: 20px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        color: #878787;
+    }
+
+    &--textarea {
+        width: 650px;
+        min-height: 120px;
+        border: none;
+        resize: none;
+        background: rgba(245, 247, 249, 0.5);
+        border-radius: 5px;
+    }
+
+    &--subbtn {
+        width: 650px;
+        height: 50px;
+        background: linear-gradient(268.65deg, #13334C -7.43%, #5782AC 100%);
+        border-radius: 5px;
+        flex: none;
+        margin-top: 50px;
+        border: none;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        color: #FFFFFF;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .contact--main {
+        &--textarea,
+        &--subbtn,
+        input {
+            width: 420px;
+        }
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .contact--main {
+        &--textarea,
+        &--subbtn,
+        input {
+            width: 300px;
+        }
+    }
+}
