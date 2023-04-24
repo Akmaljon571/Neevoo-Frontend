@@ -4,11 +4,12 @@ import about2 from '../../img/about2.png'
 import about3 from '../../img/about3.png'
 import about4 from '../../img/about4.png'
 import about5 from '../../img/about5.png'
-import main_about from '../../img/main_about.png'
+import main_about from '../../img/about_check.png'
+import check_circle from '../../img/about_circle.png'
 
 export function About() {
     return (
-        <>
+        <> 
         <section className="hero">
             <h3 className="hero__heading">
                 NEEVO ta'lim mavzusi, ta'lim markazlari uchun maxsus yaratilgan bo'lib, o'qitishga bag'ishlangan va o'quvchilarni jalb qiladi.
@@ -39,7 +40,7 @@ export function About() {
             </div>
 
             <div className='main__box'>
-                <img src={main_about} alt="main_about" />
+                <img className='main__about__img' src={main_about} alt="main_about" />
 
                 <div className='main__wrapper'>
 
@@ -54,6 +55,25 @@ export function About() {
                     <p className='main__header__text wrapper__text'>
                     Baxt farovon taassurot ishonch bor edi Har bir kechikish uchun Ularda Ekstremite endi begonalar o'z ichiga nonushta unga nutq Samimiyat yig'ilgan mamnun olib endi abadiy nihoyatda mahrum
                     </p>
+
+                    <ul className='wrapper__list'>
+                        <li className='wrapper__item'>
+                            <img src={check_circle} alt="check" />
+                            <p className='main__header__text'>O'rnatish va o'rnatish kamroq vaqt talab etadi</p>
+                        </li>
+                        <li className='wrapper__item'>
+                            <img src={check_circle} alt="check" />
+                            <p className='main__header__text'>Professional va foydalanish uchun qulay dasturiy ta'minot</p>
+                        </li>
+                        <li className='wrapper__item'>
+                            <img src={check_circle} alt="check" />
+                            <p className='main__header__text'>Pikselli dizaynga ega har qanday qurilma uchun juda mos</p>
+                        </li>
+                        <li className='wrapper__item'>
+                            <img src={check_circle} alt="check" />
+                            <p className='main__header__text'>O'rnatish va o'rnatish juda tez</p>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
