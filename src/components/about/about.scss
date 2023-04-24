@@ -29,7 +29,6 @@
     }
 
     &__heading {
-        font-family: 'Montserrat';
         font-style: normal;
         font-weight: 600;
         font-size: 32px;
@@ -54,6 +53,59 @@
         flex-direction: column;
     }
 }
+
+
+.main {
+    margin-top: 120px;
+
+    &__header {
+        margin-bottom: 30px;
+
+        &__heading {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 130%;  
+            color: #1E0A25;
+            margin-bottom: 30px;
+        }
+
+        &__text {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 180%;
+            color: #878787;
+        }
+    }
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    &__wrapper {
+        .wrapper__heading {
+            margin-bottom: 30px;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 150%;
+            color: #1E0A25;
+        }
+
+        .wrapper__text {
+            margin-bottom: 50px;
+        }
+    }
+}
+
+
+
+
+
+
 
 @media screen and (max-width: 1200px) {
     .hero {
@@ -155,7 +207,7 @@
             width: 50%;
             height: 50%;
         }
-        
+
         &__img5 {
             width: 50%;
             height: 50%;
