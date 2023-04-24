@@ -142,6 +142,14 @@
         margin: 0 auto;
     }
 
+    &--heading {
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 39px;
+        text-align: center;
+        color: #1E0A25;
+    }
+
     input {
         width: 650px;
         min-height: 55px;
@@ -166,6 +174,9 @@
         width: 650px;
         min-height: 120px;
         border: none;
+        resize: none;
+        background: rgba(245, 247, 249, 0.5);
+        border-radius: 5px;
     }
 
     &--subbtn {
