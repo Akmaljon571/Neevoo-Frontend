@@ -77,6 +77,11 @@ function Login () {
         <p className='login_p'>Keling, bugun yangi narsalarni o'rganamiz!</p>
         <img src={image} alt='boy' />
       </div>
+      <div>
+        <p>
+          
+        </p>
+      </div>
       <div className='login_right'>
         <h2 className='login_right-h2'>NEEVOOga kiring!</h2>
         <p className='login_right-p'>yoki <span onClick={() => navigate('/registr')}>Ro’yxatdan o’tish</span></p>
