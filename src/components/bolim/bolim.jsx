@@ -40,6 +40,20 @@ export const Bolim = () => {
             <p className="text">
               Doimiy ravishda mavjud toifalar bo'yicha kurslarni to'ldirish va
               yangilarini tashkil etish ustida ishlamoqda!
+              Doimiy ravishda mavjud toifalar bo'yicha kurslarni to'ldirish va
+              yangilarini tashkil etish ustida ishlamoqda!Doimiy ravishda mavjud toifalar bo'yicha kurslarni to'ldirish va
+              yangilarini tashkil etish ustida ishlamoqda!Doimiy ravishda mavjud toifalar bo'yicha kurslarni to'ldirish va
+              yangilarini tashkil etish ustida ishlamoqda!Doimiy ravishda mavjud toifalar bo'yicha kurslarni to'ldirish va
+              yangilarini tashkil etish ustida ishlamoqda!Doimiy ravishda mavjud toifalar bo'yicha kurslarni to'ldirish va
+              yangilarini tashkil etish ustida ishlamoqda!Doimiy ravishda mavjud toifalar bo'yicha kurslarni to'ldirish va
+              yangilarini tashkil etish ustida ishlamoqda!Doimiy ravishda mavjud toifalar bo'yicha kurslarni to'ldirish va
+              yangilarini tashkil etish ustida ishlamoqda!Doimiy ravishda mavjud toifalar bo'yicha kurslarni to'ldirish va
+              yangilarini tashkil etish ustida ishlamoqda!Doimiy ravishda mavjud toifalar bo'yicha kurslarni to'ldirish va
+              yangilarini tashkil etish ustida ishlamoqda!Doimiy ravishda mavjud toifalar bo'yicha kurslarni to'ldirish va
+              yangilarini tashkil etish ustida ishlamoqda!Doimiy ravishda mavjud toifalar bo'yicha kurslarni to'ldirish va
+              yangilarini tashkil etish ustida ishlamoqda!Doimiy ravishda mavjud toifalar bo'yicha kurslarni to'ldirish va
+              yangilarini tashkil etish ustida ishlamoqda!Doimiy ravishda mavjud toifalar bo'yicha kurslarni to'ldirish va
+              yangilarini tashkil etish ustida ishlamoqda!
             </p>
             <div className="form">
               <img className="search" src={search} alt="" />
