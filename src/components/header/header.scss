@@ -575,6 +575,20 @@
     right: 0;
 }
 
+.ant-menu-title-content {
+    padding-right: 80px !important;
+}
+
+.header_menu, .header_modal_menu {
+    & li {
+        & div {
+            .ant-menu-title-content {
+                padding-right: 0px !important;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 1215px) {
     .header {
         &_menu {
