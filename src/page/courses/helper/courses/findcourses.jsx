@@ -18,11 +18,10 @@ function FindCourses () {
 
   useEffect(() => {
     const titleCategory = location.pathname.split('/')[2]
-    console.log(titleCategory)
     GET('/categories/' + titleCategory)
       .then(res => res.json())
       .then(data => {
-        setCategory(data.filter(e => e.title === titleCategory)[0])
+        setCategory(data.filter(e => e.title.split(' ').join('') === titleCategory.split('%20').join(''))[0])
       })
   }, [location.pathname])
 
