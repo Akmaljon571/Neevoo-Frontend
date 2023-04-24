@@ -8,7 +8,6 @@ import { useEffect, useState } from 'react'
 import { GET } from '../../../../utils/api/get'
 import './findcourses.scss'
 import { img_url } from '../../../../content/start'
-import error from '../../../../img/404.png'
 
 function FindCourses({ children }) {
   const navigate = useNavigate()
