@@ -18,14 +18,17 @@ function FindCourses({ children }) {
   useEffect(() => {
     GET('/categories/' + children.category)
       .then(res => res.json())
-      .then(data => setCategory(data[0]))
+      .then(data => {
+        console.log(children.category)
+        setCategory(data.filter(e => e.title === children.category)[0])
+      })
   }, [children])
-  console.log(children)
   useEffect(() => {
     if (category?.id) {
       GET('/courses/bycategory/' + category.id)
         .then(res => res.json())
         .then(data => {
+          console.log(data)
           setCourses(data.filter(e => e.id !== children.id))
         })
     }
