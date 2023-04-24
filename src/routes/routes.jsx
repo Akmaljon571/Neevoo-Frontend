@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
-import { Courses, Error, Home, Login, Registr, Video } from "../page";
+import { Courses, Error, History, Home, Login, Registr, Video } from "../page";
 import { Bolim } from "../components/bolim/bolim";
 import Payment from "../components/payment/payment";
 import Parol from '../page/auth/parol/parol';
@@ -17,7 +17,7 @@ function Routerr() {
       <Route path='/registr' element={<Registr />} />
       <Route path='/login' element={<Login />} />
       {/* <Route path='/profile' element={} /> */}
-      {/* <Route path='/history' element={} /> */}
+      <Route path='/history' element={<History />} />
       <Route path='/parol' element={<Parol />} />
       {/* <Route path='/' element={} /> */}
       {/* <Route path='/' element={} /> */}
