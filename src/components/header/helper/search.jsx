@@ -92,6 +92,7 @@ function Search () {
                 ? { width: '100px', marginTop: '80px' }
                 : {}
             }
+            className='error_image'
             src={load && input?.current?.value ? loading : Error}
             alt=''
           />

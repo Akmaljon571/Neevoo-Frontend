@@ -1,4 +1,4 @@
-  import img from '../../../img/image 30.png'
+import img from '../../../img/image 30.png'
 
 function PaymentTop () {
   return (

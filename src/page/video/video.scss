@@ -265,6 +265,11 @@
             }
         }
     }
+
+    .error_image{
+        width: 400px !important;
+        height: 350px !important;
+    }
 }
 
 @media screen and (max-width: 420px) {
@@ -281,5 +286,10 @@
             width: 200px;
             height: 140px;
         }
+    }
+
+    .error_image{
+        width: 300px !important;
+        height: 250px !important;
     }
 }
