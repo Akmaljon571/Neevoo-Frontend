@@ -7,7 +7,7 @@ function Error() {
 
     return (      
         <div className='error'>
-            <img className="error_img" src={error} alt='error_image'/>
+            <img className="error_image" src={error} alt='error_image'/>
             <h1>404</h1>
             <p>Nimadir xato ketdi yoki bu sahifa endi mavjud emas.</p>
             <button onClick={() => navigate(-1)}>Bosh sahifaga qaytish</button>

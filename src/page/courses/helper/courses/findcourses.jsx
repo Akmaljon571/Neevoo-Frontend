@@ -92,7 +92,7 @@ function FindCourses () {
                 </div>
               )
             })
-          : <img style={{margin: '50px auto'}} src={error} alt='zor rasm'/>}
+          : <img className='error_image' style={{margin: '50px auto'}} src={error} alt='zor rasm'/>}
       </main>
     </>
   )

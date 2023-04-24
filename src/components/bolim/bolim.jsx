@@ -84,7 +84,7 @@ export const Bolim = () => {
               );
             })
           ) : (
-            <img style={{margin: "20px auto"}} src={error} alt="error" />
+            <img className="error_image" style={{margin: "20px auto"}} src={error} alt="error" />
           )}
         </ul>
       </div>

@@ -29,14 +29,12 @@ function FindCourses ({ children }) {
     }
   }, [category])
 
-  console.log(courses)
-
   return (
     <>
       <main className='courses_main'>
         {courses?.length ? (
           courses.map((e, i) => (
-            <>
+            <div key={i}>
               {i < 3 ? (
                 <div className='courses_container' key={e?.id}>
                   <div  onClick={() => navigate('/course/' + e?.title)} className='courses_img'>
@@ -84,10 +82,10 @@ function FindCourses ({ children }) {
                   </div>
                 </div>
               ) : null}
-            </>
+            </div>
           ))
         ) : (
-          <img style={{ margin: '0 auto' }} src={error} alt='zor rasm' />
+          <img className='error_image' style={{ margin: '0 auto' }} src={error} alt='zor rasm' />
         )}
       </main>
     </>

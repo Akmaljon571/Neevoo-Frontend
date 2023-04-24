@@ -64,10 +64,10 @@ function VideoHelper ({ children }) {
       </div>
       <ul className='video_right'>
         {videos.length
-          ? videos.map(e => (
+          ? videos.map((e, i) => (
               <li
                 onClick={() => handleClick(e?.link)}
-                key={e?.id}
+                key={i}
                 className={
                   e?.link === one?.split('/').at(-1)
                     ? 'video_item video_active'
