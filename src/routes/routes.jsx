@@ -4,6 +4,7 @@ import { Bolim } from "../components/bolim/bolim";
 import Payment from "../components/payment/payment";
 import Parol from '../page/auth/parol/parol';
 import { About } from '../components/about/about';
+import { Contact } from '../components/contact/contact';
 
 function Routerr() {
   return (
@@ -14,7 +15,7 @@ function Routerr() {
       <Route path='/course/:id' element={<Video />} />
       <Route path='/payment' element={<Payment />} />
       <Route path='/about' element={<About/>} />
-      {/* <Route path='/aloqa' element={} /> */}
+      <Route path='/aloqa' element={<Contact/>} />
       <Route path='/registr' element={<Registr />} />
       <Route path='/login' element={<Login />} />
       {/* <Route path='/profile' element={} /> */}
