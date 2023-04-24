@@ -2,7 +2,7 @@ import './contact.scss'
 import contact_location from '../../img/contact__location.png'
 import contact_phone from '../../img/contact__phone.png'
 import contact_mail from '../../img/contact_mail.png'
-// import contact_pochta from '../../img/contact_pochta.png'
+import contact_pochta from '../../img/contact_pochta.png'
 import contact_w_location from '../../img/contact_w_loc.png'
 import contact_w_phone from '../../img/contact_w_phone.png'
 import contact_w_mail from '../../img/contact_w_mail.png'
@@ -98,9 +98,26 @@ export function Contact(){
             </div>
 
         </section>
-
-        <section className='contact__main'>
-            
+        <section className='contact--main'>
+            <img className='contact--main--img' src={contact_pochta} alt="contact_pochta" />
+            <form className='contact--main--box'>
+                <h3 className='contact--main--heading'>Bizga xabar qoldiring!</h3>
+                <label >
+                    Ism familiyangiz
+                    <input type="text" />
+                </label>
+                
+                <label>
+                    Email pochta
+                    <input type="email" />
+                </label>
+                <label>
+                    Xabar yozish
+                    <textarea className='contact--main--textarea'></textarea>
+                </label>
+                
+                <button type="submit" className='contact--main--subbtn'>Yuborish</button>
+            </form>
         </section>
         </>
     )

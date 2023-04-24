@@ -122,3 +122,83 @@
         }
     }
 }
+
+.contact--main {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    gap: 20px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+
+    &--img {
+        max-width: 478px;
+        max-height: 511px;
+        min-width: 300px;
+        margin: 0 auto;
+    }
+
+    &--box {
+        margin: 0 auto;
+    }
+
+    input {
+        width: 650px;
+        min-height: 55px;
+        background: rgba(245, 247, 249, 0.5);
+        border-radius: 5px;
+        border: none;
+        flex: none;
+    }
+
+    label {
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        margin-top: 20px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        color: #878787;
+    }
+
+    &--textarea {
+        width: 650px;
+        min-height: 120px;
+        border: none;
+    }
+
+    &--subbtn {
+        width: 650px;
+        height: 50px;
+        background: linear-gradient(268.65deg, #13334C -7.43%, #5782AC 100%);
+        border-radius: 5px;
+        flex: none;
+        margin-top: 50px;
+        border: none;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        color: #FFFFFF;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .contact--main {
+        &--textarea,
+        &--subbtn,
+        input {
+            width: 420px;
+        }
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .contact--main {
+        &--textarea,
+        &--subbtn,
+        input {
+            width: 300px;
+        }
+    }
+}
