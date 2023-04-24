@@ -19,7 +19,6 @@ function FindCourses({ children }) {
     GET('/categories/' + children.category)
       .then(res => res.json())
       .then(data => {
-        console.log(children.category)
         setCategory(data.filter(e => e.title === children.category)[0])
       })
   }, [children])
@@ -28,7 +27,6 @@ function FindCourses({ children }) {
       GET('/courses/bycategory/' + category.id)
         .then(res => res.json())
         .then(data => {
-          console.log(data)
           setCourses(data.filter(e => e.id !== children.id))
         })
     }
@@ -36,7 +34,7 @@ function FindCourses({ children }) {
 
   return (
     <>
-      <main className='courses_main'>
+      <div style={{minHeight: '200px', marginBottom: '100px'}} className='courses_main'>
         {courses?.length ? (
           courses.map((e, i) => (
             <div className='courses_container' key={e?.id}>
@@ -90,9 +88,9 @@ function FindCourses({ children }) {
             </div>
           ))
         ) : (
-          <img className='error_image' style={{ margin: '0 auto' }} src={error} alt='zor rasm' />
+          null
         )}
-      </main>
+      </div>
     </>
   )
 }

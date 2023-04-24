@@ -11,7 +11,9 @@ function Descrioption () {
     const titleCategory = location.pathname.split('/')[2]
     GET('/categories/' + titleCategory)
       .then(res => res.json())
-      .then(data => setCategory(data.filter(e => e.title === titleCategory)))
+      .then(data => {
+        setCategory(data.filter(e => e.title.split(' ').join('') === titleCategory.split('%20').join('')))
+      })
   }, [location.pathname])
 
   return (
@@ -19,7 +21,7 @@ function Descrioption () {
       {category?.length ? (
         category.map(e => {
           return (
-            <div className='descrioption' key={e?.id}>
+            <div style={{marginBottom: '100px', marginTop: '32px'}} className='descrioption' key={e?.id}>
               <img
                 className='descrioption_img'
                 src={'https://storage.googleapis.com/course_hunter/' + e?.image}
