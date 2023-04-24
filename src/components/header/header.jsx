@@ -71,7 +71,7 @@ function Header () {
   }
 
   const obj = {
-    label: `Bosqalar`,
+    label: `Boshqalar`,
     icon: (
       <ArrowRightOutlined
         style={{ fontSize: '20px', color: 'blue', margin: '0 5px' }}
