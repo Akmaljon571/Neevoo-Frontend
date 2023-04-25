@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import useStart from "../../hooks/useStart";
-import "./profile.scss";
 import { GET } from "../../utils/api/get";
+import "./profile.scss";
 
 export const Profile = () => {
   const { token } = useStart()
@@ -12,8 +12,6 @@ export const Profile = () => {
     .then(re => re.json())
     .then(data => setFindUser(data))
   }, [setFindUser, token]);
-
-  console.log(findUser)
 
   return (
     <>
