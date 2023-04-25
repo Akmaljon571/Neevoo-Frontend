@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.22393e3a.css",
-    "main.js": "/static/js/main.baacda56.js",
+    "main.js": "/static/js/main.66b792b9.js",
     "static/media/about_check.png": "/static/media/about_check.658f7628ff96c7b51957.png",
     "static/media/about3.png": "/static/media/about3.49aedcdc787b6169e243.png",
     "static/media/Group 1.png": "/static/media/Group 1.20fe34408e25e50bbee2.png",
@@ -45,10 +45,10 @@
     "static/media/Star 2.svg": "/static/media/Star 2.4d696e23e8ae593e0cb857b0869f50c2.svg",
     "static/media/Polygon 3.svg": "/static/media/Polygon 3.24e5c950af2f55f080252470c3b66ac3.svg",
     "main.22393e3a.css.map": "/static/css/main.22393e3a.css.map",
-    "main.baacda56.js.map": "/static/js/main.baacda56.js.map"
+    "main.66b792b9.js.map": "/static/js/main.66b792b9.js.map"
   },
   "entrypoints": [
     "static/css/main.22393e3a.css",
-    "static/js/main.baacda56.js"
+    "static/js/main.66b792b9.js"
   ]
 }

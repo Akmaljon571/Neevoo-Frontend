@@ -1,6 +1,20 @@
+import { useEffect, useState } from "react";
+import useStart from "../../hooks/useStart";
 import "./profile.scss";
+import { GET } from "../../utils/api/get";
 
 export const Profile = () => {
+  const { token } = useStart()
+  const [findUser, setFindUser] = useState()
+
+  useEffect(() => {
+    GET('/users/one', token)
+    .then(re => re.json())
+    .then(data => setFindUser(data))
+  }, [setFindUser, token]);
+
+  console.log(findUser)
+
   return (
     <>
       <div>
@@ -17,7 +31,7 @@ export const Profile = () => {
                 <div>
                   <div>
                     <p className="tex">Email pochta</p>
-                    <input className="form_inp disabled" type="email" placeholder="E-mail" disabled defaultValue={"sofaw13022@raotus.com"} />
+                    <input className="form_inp disabled" type="email" placeholder="E-mail" disabled defaultValue={findUser?.email} />
                   </div>
                   <div>
                     <p className="tex">Parol</p>
