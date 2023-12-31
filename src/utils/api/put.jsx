@@ -1,4 +1,4 @@
-import { host } from "../../content/start"
+import { host } from "../../context/start"
 
 export const PUT = (api, body, token = false) => {
     if (token) {
@@ -6,7 +6,7 @@ export const PUT = (api, body, token = false) => {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
-                autharization: token
+                authorization: token
             },
             body: JSON.stringify(body)
         })

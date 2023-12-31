@@ -7,7 +7,7 @@ import {
 import { useEffect, useState } from 'react'
 import { GET } from '../../../../utils/api/get'
 import './findcourses.scss'
-import { img_url } from '../../../../content/start'
+import { img_url } from '../../../../context/start'
 
 function FindCourses({ children }) {
   const navigate = useNavigate()
@@ -33,7 +33,7 @@ function FindCourses({ children }) {
 
   return (
     <>
-      <div style={{minHeight: '200px', marginBottom: '100px'}} className='courses_main'>
+      <div style={{ minHeight: '200px', marginBottom: '100px' }} className='courses_main'>
         {courses?.length ? (
           courses.map((e, i) => (
             <div className='courses_container' key={e?.id}>

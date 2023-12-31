@@ -2,11 +2,11 @@
 import { useLocation } from 'react-router-dom'
 import { GET } from '../../../utils/api/get'
 import { useEffect, useState } from 'react'
-import { img_url } from '../../../content/start'
+import { img_url } from '../../../context/start'
 import VideoHelper from './video'
 import FindCourses from './courses/findcourses'
 
-function Hero () {
+function Hero() {
   const [course, setCourse] = useState({})
   const location = useLocation()
   const { count } = useState()
@@ -17,7 +17,7 @@ function Hero () {
       .then(re => re.json())
       .then(data => setCourse(data[0]))
   }, [count, location.pathname])
-  
+
   return (
     <div className='video'>
       <h1>
@@ -48,10 +48,10 @@ function Hero () {
                   {course.lang === 'uz'
                     ? 'O’zbek'
                     : course.lang === 'ru'
-                    ? 'Rus'
-                    : course.lang === 'en'
-                    ? 'English'
-                    : 'O’zbek'}
+                      ? 'Rus'
+                      : course.lang === 'en'
+                        ? 'English'
+                        : 'O’zbek'}
                 </span>
               </p>
             </li>

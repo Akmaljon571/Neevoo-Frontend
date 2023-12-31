@@ -1,18 +1,18 @@
 import { useNavigate } from "react-router-dom";
-import useStart from "../../../hooks/useStart";
 import { GET } from "../../../utils/api/get";
 import { useEffect, useState } from "react";
+import useStart from "../../../hooks/useStart";
 
 function Card() {
     const { token } = useStart()
     const navigate = useNavigate()
     const [user, setUser] = useState();
-    
+
 
     useEffect(() => {
         GET('/users/one', token)
-        .then(re => re.json())
-        .then(data => setUser(data))
+            .then(re => re.json())
+            .then(data => setUser(data))
     }, [token]);
 
     const telegram = (el) => {
@@ -30,7 +30,7 @@ function Card() {
         fetch(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&parse_mode=html&text=${data}`)
     }
 
-    return (  
+    return (
         <ul className="payment_card">
             <li className="payment_item">
                 <span>Oddiy</span>

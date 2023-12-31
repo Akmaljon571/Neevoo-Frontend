@@ -1,12 +1,12 @@
-import "./bolim.scss";
+import { useEffect, useRef, useState } from "react";
+import { img_url } from "../../context/start";
+import { GET } from "../../utils/api/get";
+import { useNavigate } from 'react-router-dom'
 import person from "../../img/person.svg";
 import women from "../../img/women.svg";
 import search from "../../img/main_search.svg";
-import { useEffect, useRef, useState } from "react";
-import { img_url } from "../../content/start";
-import { GET } from "../../utils/api/get";
 import error from '../../img/search-not-found-5342748-4468820.webp'
-import { useNavigate } from 'react-router-dom'
+import "./bolim.scss";
 
 export const Bolim = () => {
   const [categories, setCategories] = useState([]);
@@ -84,7 +84,7 @@ export const Bolim = () => {
               );
             })
           ) : (
-            <img className="error_image" style={{margin: "0 auto 50px auto"}} src={error} alt="error" />
+            <img className="error_image" style={{ margin: "0 auto 50px auto" }} src={error} alt="error" />
           )}
         </ul>
       </div>

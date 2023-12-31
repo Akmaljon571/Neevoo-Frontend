@@ -22,10 +22,6 @@ function Routerr() {
       <Route path="/profile" element={<Profile />} />
       <Route path="/history" element={<History />} />
       <Route path="/parol" element={<Parol />} />
-      {/* <Route path='/' element={} /> */}
-      {/* <Route path='/' element={} /> */}
-      {/* <Route path='/' element={} /> */}
-      {/* <Route path='/' element={} /> */}
       <Route path="/*" element={<Error />} />
     </Routes>
   );

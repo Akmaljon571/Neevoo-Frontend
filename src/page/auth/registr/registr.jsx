@@ -1,15 +1,15 @@
-import './registr.scss'
+import { useRef, useState } from 'react'
+import { POST } from '../../../utils/api/post'
+import { useNavigate } from 'react-router-dom'
+import { host } from '../../../context/start'
+import { message } from 'antd'
 import image from '../../../img/image 27 (1).png'
 import mail from '../../../img/mail.svg'
 import lock from '../../../img/lock.svg'
-import { useRef, useState } from 'react'
-import { POST } from '../../../utils/api/post'
-import { message } from 'antd'
 import useStart from '../../../hooks/useStart'
-import { useNavigate } from 'react-router-dom'
-import { host } from '../../../content/start'
+import './registr.scss'
 
-function Registr () {
+function Registr() {
   const email = useRef()
   const password = useRef()
   const password2 = useRef()
@@ -116,27 +116,27 @@ function Registr () {
     fetch(
       host + '/users/registr/email/' + inputCode.current?.value?.trim()
     )
-    .then(re => re.json())
-    .then(data => {
-      if (data.status === 201) {
-        setToken(data.token)
-        localStorage.setItem('user_token', JSON.stringify(data.token))
-        navigate('/bolim')
-        messageApi.open({
-          key,
-          type: 'success',
-          content: 'Loaded!',
-          duration: 2
-        })
-      } else {
-        messageApi.open({
-          key,
-          type: 'error',
-          content: 'Kiritilgan kod noto’g’ri!',
-          duration: 2
-        })
-      }
-    })
+      .then(re => re.json())
+      .then(data => {
+        if (data.status === 201) {
+          setToken(data.token)
+          localStorage.setItem('user_token', JSON.stringify(data.token))
+          navigate('/bolim')
+          messageApi.open({
+            key,
+            type: 'success',
+            content: 'Loaded!',
+            duration: 2
+          })
+        } else {
+          messageApi.open({
+            key,
+            type: 'error',
+            content: 'Kiritilgan kod noto’g’ri!',
+            duration: 2
+          })
+        }
+      })
   }
 
   return (
@@ -218,7 +218,7 @@ function Registr () {
             </button>
           </>
         )}
-      {contextHolder}
+        {contextHolder}
       </div>
     </div>
   )

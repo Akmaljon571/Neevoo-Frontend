@@ -1,7 +1,7 @@
 import { useContext } from 'react'
-import { State } from '../content/start'
+import { State } from '../context/start'
 
-function useStart () {
+function useStart() {
   const {
     token,
     setToken,

@@ -2,10 +2,10 @@ import { ArrowRightOutlined } from '@ant-design/icons'
 import { useNavigate } from 'react-router-dom'
 import { useEffect, useRef, useState } from 'react'
 import { Menu } from 'antd'
+import { GET } from '../../utils/api/get'
+import { img_url } from '../../context/start'
 import logo from '../../img/2-logo 1.svg'
 import bolim from '../../img/Frame.svg'
-import { GET } from '../../utils/api/get'
-import { img_url } from '../../content/start'
 import login from '../../img/log-in.svg'
 import uz from '../../img/image 38.svg'
 import ru from '../../img/image 36.svg'
@@ -17,7 +17,7 @@ import Search from './helper/search'
 import profile from '../../img/Frame 256.png'
 import './header.scss'
 
-function Header () {
+function Header() {
   const [list, setList] = useState([])
   const [select, setSelect] = useState('uz')
   const {
@@ -38,10 +38,10 @@ function Header () {
         e.target.textContent === 'Uzbek'
           ? 'uz'
           : e.target.textContent === 'Rus'
-          ? 'ru'
-          : e.target.textContent === 'English'
-          ? 'en'
-          : uz
+            ? 'ru'
+            : e.target.textContent === 'English'
+              ? 'en'
+              : uz
       setSelect(value)
     }
   }
@@ -170,10 +170,10 @@ function Header () {
                     select === 'uz'
                       ? uz
                       : select === 'ru'
-                      ? ru
-                      : select === 'en'
-                      ? en
-                      : uz
+                        ? ru
+                        : select === 'en'
+                          ? en
+                          : uz
                   }
                   alt=''
                 />

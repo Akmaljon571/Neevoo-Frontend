@@ -1,7 +1,8 @@
 import { Header, Main, Footer } from './components'
-import './App.scss'
 import Container from './components/container/container'
-function App () {
+import './App.scss'
+
+function App() {
   return (
     <Container>
       <Header />

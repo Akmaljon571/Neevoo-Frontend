@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
 import useStart from '../../../hooks/useStart'
 import { GET } from '../../../utils/api/get'
-import { img_url } from '../../../content/start'
+import { img_url } from '../../../context/start'
 import { useNavigate } from 'react-router-dom'
 
-function VideoHelper ({ children }) {
+function VideoHelper({ children }) {
   const [videos, setVideos] = useState([])
   const [active, setActive] = useState(false)
   const [one, setOne] = useState({})
@@ -35,6 +35,7 @@ function VideoHelper ({ children }) {
       videoRef.current.load();
     }
   }
+
   return (
     <div className='video video_father'>
       <div className='video_left'>
@@ -42,7 +43,7 @@ function VideoHelper ({ children }) {
           <video
             controls
             muted
-            onCanPlayThrough={() => videoRef.current.play()}
+            onCanPlayThrough={() => videoRef.current?.play()}
             ref={videoRef}
             autoPlay={'autoplay'}
             preload='auto'
@@ -65,22 +66,22 @@ function VideoHelper ({ children }) {
       <ul className='video_right'>
         {videos.length
           ? videos.map((e, i) => (
-              <li
-                onClick={() => handleClick(e?.link)}
-                key={i}
-                className={
-                  e?.link === one?.split('/').at(-1)
-                    ? 'video_item video_active'
-                    : 'video_item'
-                }
-              >
-                <div className='video_item-top'>
-                  <p>{e?.sequence}-Dars</p>
-                  <span>{e?.duration}</span>
-                </div>
-                <h3>{e?.text}</h3>
-              </li>
-            ))
+            <li
+              onClick={() => handleClick(e?.link)}
+              key={i}
+              className={
+                e?.link === one?.split('/').at(-1)
+                  ? 'video_item video_active'
+                  : 'video_item'
+              }
+            >
+              <div className='video_item-top'>
+                <p>{e?.sequence}-Dars</p>
+                <span>{e?.duration}</span>
+              </div>
+              <h3>{e?.text}</h3>
+            </li>
+          ))
           : null}
       </ul>
     </div>

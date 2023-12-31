@@ -1,6 +1,6 @@
+import { useNavigate } from 'react-router-dom';
 import play from '../../../../img/play-circle.svg'
 import nike from '../../../../img/check-circle.svg'
-import { useNavigate } from 'react-router-dom';
 import person from '../../../../img/Group 1.png'
 import persons from '../../../../img/Group 3 (1).png'
 import star from '../../../../img/Star 1.png'
@@ -11,11 +11,11 @@ import './hero.scss'
 function Hero() {
     const navigate = useNavigate()
 
-    return (  
+    return (
         <div className="hero">
             <div className="hero_left">
                 <h1 className="hero_h1">
-                Biz bilan darslarni maksimal darajada o’rganing
+                    Biz bilan darslarni maksimal darajada o’rganing
                 </h1>
                 <p className="hero_p">Mutaxassislar tomonidan yangi ko'nikmalarga ega bo'lishga yordam berish uchun o'rgatiladi.</p>
                 <div className="hero_reklama">
@@ -30,9 +30,9 @@ function Hero() {
                 </div>
                 <div className="hero_btn">
                     <button className='hero_btn-boshla' onClick={() => navigate('/bolim')}>Boshlash</button>
-                    <button className='hero_btn-bolim' onClick={() => navigate('/bolim')}> 
+                    <button className='hero_btn-bolim' onClick={() => navigate('/bolim')}>
                         <img src={play} alt="" />
-                    <span>Video darslik ko’rish</span></button>
+                        <span>Video darslik ko’rish</span></button>
                 </div>
             </div>
             <div className="hero_right">

@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
-import useStart from '../../../hooks/useStart'
+import { useNavigate } from 'react-router-dom'
 import { GET } from '../../../utils/api/get'
-import { img_url } from '../../../content/start'
+import { img_url } from '../../../context/start'
+import useStart from '../../../hooks/useStart'
 import Error from '../../../img/search-not-found-5342748-4468820.webp'
 import loading from '../../../img/ZZ5H.gif'
-import { useNavigate } from 'react-router-dom'
 
-function Search () {
+function Search() {
   const { headerSearch, setHeaderSearch, setCount, count } = useStart()
   const [list, setList] = useState([])
   const [load, setLoad] = useState(false)
@@ -90,7 +90,7 @@ function Search () {
             style={
               load && input?.current?.value
                 ? { width: '100px', marginTop: '80px' }
-                : {width: '350px', marginTop: '10px'}
+                : { width: '350px', marginTop: '10px' }
             }
             className='error_image'
             src={load && input?.current?.value ? loading : Error}

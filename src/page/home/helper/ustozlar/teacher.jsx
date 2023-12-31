@@ -1,12 +1,12 @@
-import './teacher.scss'
+import { useNavigate } from 'react-router-dom'
 import dumaloq from '../../../../img/Ellipse 9.png'
 import ustoz from '../../../../img/Ellipse 3.png'
 import card2 from '../../../../img/Ellipse 3 (1).png'
 import card3 from '../../../../img/Rectangle 8.png'
 import burchak from '../../../../img/Frame 29.png'
-import { useNavigate } from 'react-router-dom'
+import './teacher.scss'
 
-function HomeTeacher () {
+function HomeTeacher() {
   const navigate = useNavigate()
 
   return (
@@ -39,7 +39,7 @@ function HomeTeacher () {
           <span>Dennis Barett</span>
         </div>
         <div className='home_dumaloq-card3'>
-            <span className='home_dumaloq-span'>100+ Ustozlar</span>
+          <span className='home_dumaloq-span'>100+ Ustozlar</span>
           <div>
             <img src={card3} alt='home page _image' />
             <div className='home-header-div'>

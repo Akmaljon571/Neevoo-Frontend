@@ -6,10 +6,10 @@ import {
 } from '@ant-design/icons'
 import { useEffect, useState } from 'react'
 import { GET } from '../../../utils/api/get'
-import './findcourses.scss'
-import { img_url } from '../../../content/start'
+import { img_url } from '../../../context/start'
 import useStart from '../../../hooks/useStart'
 import error from '../../../img/search-not-found-5342748-4468820.webp'
+import './findcourses.scss'
 
 function FindCourses() {
   const children = ''
@@ -26,8 +26,8 @@ function FindCourses() {
   }, [children, setCourses, token])
   return (
     <>
-    <h1 className='hsitory_h1' style={{margin: '30px 0 50px 0'}}>Avval ko'rilgan Courselar</h1>
-    <span>Davom etiring!!!</span>
+      <h1 className='hsitory_h1' style={{ margin: '30px 0 50px 0' }}>Avval ko'rilgan Courselar</h1>
+      <span>Davom etiring!!!</span>
       <div style={{ minHeight: '200px', marginBottom: '100px', marginTop: '10px' }} className='courses_main'>
         {courses?.length ? (
           courses.map((e, i) => (
@@ -78,7 +78,7 @@ function FindCourses() {
             </div>
           ))
         ) : (
-          <img className='error_image' style={{margin: '50px auto'}} src={error} alt='zor rasm'/>
+          <img className='error_image' style={{ margin: '50px auto' }} src={error} alt='zor rasm' />
         )}
       </div>
     </>

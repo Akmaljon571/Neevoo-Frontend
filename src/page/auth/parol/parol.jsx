@@ -1,13 +1,13 @@
-import '../registr/registr.scss'
-import image from '../../../img/image 27 (1).png'
-import mail from '../../../img/mail.svg'
-import lock from '../../../img/lock.svg'
 import { useRef, useState } from 'react'
 import { POST } from '../../../utils/api/post'
 import { message } from 'antd'
 import { useNavigate } from 'react-router-dom'
+import image from '../../../img/image 27 (1).png'
+import mail from '../../../img/mail.svg'
+import lock from '../../../img/lock.svg'
+import '../registr/registr.scss'
 
-function Parol () {
+function Parol() {
   const email = useRef()
   const password = useRef()
   const password2 = useRef()
@@ -96,10 +96,10 @@ function Parol () {
 
   const code = () => {
     const obj = {
-        password: password.current.value,
-        newPassword: password2.current.value
-      }
-  
+      password: password.current.value,
+      newPassword: password2.current.value
+    }
+
     messageApi.open({
       key,
       type: 'loading',
@@ -169,7 +169,7 @@ function Parol () {
                 <input ref={password} type='password' placeholder='*********' />
               </div>
             </div>
-            <div style={{marginBottom: 30}} className='registr_right-password1'>
+            <div style={{ marginBottom: 30 }} className='registr_right-password1'>
               <h3>Parolni Takrorlash</h3>
               <div>
                 <img src={lock} alt='' />

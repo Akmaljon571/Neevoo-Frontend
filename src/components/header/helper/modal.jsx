@@ -2,9 +2,9 @@ import { ArrowRightOutlined } from '@ant-design/icons'
 import { useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { Drawer, Menu } from 'antd'
-import bolim from '../../../img/Frame.svg'
 import { GET } from '../../../utils/api/get'
-import { img_url } from '../../../content/start'
+import { img_url } from '../../../context/start'
+import bolim from '../../../img/Frame.svg'
 import login from '../../../img/log-in.svg'
 import uz from '../../../img/image 38.svg'
 import ru from '../../../img/image 36.svg'
@@ -20,7 +20,7 @@ const Modal = () => {
     useStart()
   const navigate = useNavigate()
 
-  const clickMenu = ({ key, domEvent  }) => {
+  const clickMenu = ({ key, domEvent }) => {
     const typeKey = typeof key == 'number' ? 1 : '1'
 
     if (key !== typeKey) {
@@ -55,10 +55,10 @@ const Modal = () => {
         e.target.textContent === 'Uzbek'
           ? 'uz'
           : e.target.textContent === 'Rus'
-          ? 'ru'
-          : e.target.textContent === 'English'
-          ? 'en'
-          : uz
+            ? 'ru'
+            : e.target.textContent === 'English'
+              ? 'en'
+              : uz
       setSelect(value)
       setOpen(false)
     }
@@ -240,10 +240,10 @@ const Modal = () => {
               </ul>
             </div>
           ) : (
-             <div onClick={() => navigate('/login')} className='header_modal_login'>
-                <img className='header_login--img' src={login} alt='' />
-                <span className='header_login--span'>Kirish</span>
-              </div>
+            <div onClick={() => navigate('/login')} className='header_modal_login'>
+              <img className='header_login--img' src={login} alt='' />
+              <span className='header_login--span'>Kirish</span>
+            </div>
           )}
           <Menu
             onClick={clickMenu}
@@ -259,10 +259,10 @@ const Modal = () => {
                   select === 'uz'
                     ? uz
                     : select === 'ru'
-                    ? ru
-                    : select === 'en'
-                    ? en
-                    : uz
+                      ? ru
+                      : select === 'en'
+                        ? en
+                        : uz
                 }
                 alt=''
               />

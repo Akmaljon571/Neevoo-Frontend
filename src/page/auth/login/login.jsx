@@ -1,14 +1,14 @@
-import './login.scss'
-import image from '../../../img/image 27 (1).png'
-import mail from '../../../img/mail.svg'
-import lock from '../../../img/lock.svg'
 import { useRef } from 'react'
 import { POST } from '../../../utils/api/post'
 import { message } from 'antd'
-import useStart from '../../../hooks/useStart'
 import { useNavigate } from 'react-router-dom'
+import image from '../../../img/image 27 (1).png'
+import mail from '../../../img/mail.svg'
+import lock from '../../../img/lock.svg'
+import useStart from '../../../hooks/useStart'
+import './login.scss'
 
-function Login () {
+function Login() {
   const email = useRef()
   const password = useRef()
   const [messageApi, contextHolder] = message.useMessage();
@@ -33,40 +33,40 @@ function Login () {
     }
 
     if (obj.email !== '' && obj.password !== '') {
-        messageApi.open({
-          key,
-          type: 'loading',
-          content: 'Loading...'
+      messageApi.open({
+        key,
+        type: 'loading',
+        content: 'Loading...'
+      })
+      POST('/users/login', obj)
+        .then(re => re.json())
+        .then(data => {
+          if (data.status === 201) {
+            setToken(data.token)
+            localStorage.setItem('user_token', JSON.stringify(data.token))
+            navigate('/bolim')
+            messageApi.open({
+              key,
+              type: 'success',
+              content: 'Loaded!',
+              duration: 2,
+            });
+          } else {
+            messageApi.open({
+              key,
+              type: 'error',
+              content: 'Loaded!',
+              duration: 2,
+            });
+          }
         })
-        POST('/users/login', obj)
-          .then(re => re.json())
-          .then(data => {
-            if (data.status === 201) {
-                setToken(data.token)
-                localStorage.setItem('user_token', JSON.stringify(data.token))
-                navigate('/bolim')
-                messageApi.open({
-                    key,
-                    type: 'success',
-                    content: 'Loaded!',
-                    duration: 2,
-                });
-            } else {
-                messageApi.open({
-                    key,
-                    type: 'error',
-                    content: 'Loaded!',
-                    duration: 2,
-                });        
-            }
-          })
     } else {
-        messageApi.open({
-            key,
-            type: 'error',
-            content: 'Malumotlaringizni kiriting!',
-            duration: 2,
-        }); 
+      messageApi.open({
+        key,
+        type: 'error',
+        content: 'Malumotlaringizni kiriting!',
+        duration: 2,
+      });
     }
   }
 

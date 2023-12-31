@@ -1,6 +1,6 @@
 import { createContext, useState } from 'react'
 
-export const host = 'https://api.neevoo.uz/v1'
+export const host = 'http://localhost:3003/vi'
 export const img_url = 'https://storage.googleapis.com/course_hunter/'
 export const State = createContext()
 

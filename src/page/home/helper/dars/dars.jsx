@@ -1,21 +1,21 @@
 import { GET } from '../../../../utils/api/get';
+import { useEffect, useState } from 'react';
 import kampyuter1 from '../../../../img/monitor.png'
 import kampyuter2 from '../../../../img/monitor (2).png'
 import kampyuter3 from '../../../../img/monitor (1).png'
 import kampyuter4 from '../../../../img/monitor (3).png'
 import './dars.scss'
-import { useEffect, useState } from 'react';
 
 function Dars() {
     const [data, setData] = useState({});
-    
+
 
     useEffect(() => {
         GET('/history/count')
-        .then(re => re.json())
-        .then(baza => setData(baza))
+            .then(re => re.json())
+            .then(baza => setData(baza))
     }, []);
-    return (  
+    return (
         <ul className='dars'>
             <li className='dars_item1'>
                 <img src={kampyuter1} alt="kampyuter" />

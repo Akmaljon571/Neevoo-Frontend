@@ -1,4 +1,4 @@
-import { host } from "../../content/start"
+import { host } from "../../context/start"
 
 export const DELETE = (api, token = false) => {
     if (token) {
@@ -6,7 +6,7 @@ export const DELETE = (api, token = false) => {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
-                autharization: token
+                authorization: token
             }
         })
     } else {
